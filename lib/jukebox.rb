@@ -28,19 +28,19 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   user_response = gets.strip
+  song_to_play = ''
   songs.each_with_index do |song, ind|
     song_name = song.split('-')[1]
     if user_response == (ind+1).to_s
-      puts "Playing " + song_name
-      break
+      song_to_play = song_name
     elsif user_response.downcase == song_name.strip.downcase
-      puts "Playing " + song_name
-      break
-    else
-      puts "Invalid input, please try again"
-      break
+      song_to_play = song_name
     end
   end
+  if song_to_play.length > 0
+    puts "Playing " + song_to_play[0]
+  else
+    puts "Invalid input, please try again"
 end
 
 def exit_jukebox
