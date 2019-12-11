@@ -30,11 +30,10 @@ def play(songs)
   user_response = gets.strip
   song_to_play = ''
   songs.each_with_index do |song, ind|
-    song_name = song.split('-')[1]
     if user_response == (ind+1).to_s
-      song_to_play = song_name
+      song_to_play = song
     elsif user_response.downcase == song_name.strip.downcase
-      song_to_play = song_name
+      song_to_play = song
     end
   end
   if song_to_play.length > 0
