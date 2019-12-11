@@ -42,5 +42,13 @@ end
 
 def run(songs)
   puts "Please enter a command:"
-  user_command = gets.strip
+  valid_command = false
+  until valid command
+    user_command = gets.strip.downcase
+    ['help','list','play','exit'].each do |option|
+      if option == user_command
+        valid_command == true
+      end
+    end
+  end
 end
