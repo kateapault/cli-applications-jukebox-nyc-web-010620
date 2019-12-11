@@ -32,10 +32,13 @@ def play(songs)
     song_name = song.split('-')[1]
     if user_response == (ind+1).to_s
       puts "Playing " + song_name
+      break
     elsif user_response.downcase == song_name.strip.downcase
       puts "Playing " + song_name
+      break
     else
       puts "Invalid input, please try again"
+      break
     end
   end
 end
