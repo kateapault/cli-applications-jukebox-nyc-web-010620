@@ -32,7 +32,7 @@ def play(songs)
   songs.each_with_index do |song, ind|
     if user_response == (ind+1).to_s
       song_to_play = song
-    elsif user_response.downcase == song_name.strip.downcase
+    elsif user_response.downcase == song.downcase
       song_to_play = song
     end
   end
