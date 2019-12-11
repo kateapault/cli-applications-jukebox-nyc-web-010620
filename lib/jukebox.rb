@@ -45,9 +45,9 @@ def exit_jukebox
 end
 
 def run(songs)
-  puts "Please enter a command:"
   exit_command = false
   until exit_command
+    puts "Please enter a command:"
     user_command = gets.strip.downcase
     case user_command
     when 'help'
