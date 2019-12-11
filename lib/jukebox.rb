@@ -46,22 +46,19 @@ end
 
 def run(songs)
   puts "Please enter a command:"
-  valid_command = false
-  until valid_command
+  exit_command = false
+  until exit_command
     user_command = gets.strip.downcase
     case user_command
     when 'help'
-      valid_command = true
       help
     when 'list'
-      valid_command = true
       list(songs)
     when 'play'
-      valid_command = true
       play(songs)
     when 'exit'
-      valid_command = true
       exit_jukebox
+      exit_command = true
     else
       puts "Invalid input, please try again"
     end
