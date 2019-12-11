@@ -40,10 +40,14 @@ def play(songs)
   end
 end
 
+def exit_jukebox
+  puts "Goodbye"
+end
+
 def run(songs)
   puts "Please enter a command:"
   valid_command = false
-  until valid command
+  until valid_command
     user_command = gets.strip.downcase
     ['help','list','play','exit'].each do |option|
       if option == user_command
@@ -51,4 +55,5 @@ def run(songs)
       end
     end
   end
+  
 end
