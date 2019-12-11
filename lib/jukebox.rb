@@ -50,8 +50,8 @@ def run(songs)
   until valid_command
     user_command = gets.strip.downcase
     case user_command
-    
-    
+    when 'help'
+    end
   end
   
 end
