@@ -37,7 +37,7 @@ def play(songs)
     end
   end
   if song_to_play.length > 0
-    puts "Playing" + song_to_play
+    puts "Playing " + song_to_play
   else
     puts "Invalid input, please try again"
   end
